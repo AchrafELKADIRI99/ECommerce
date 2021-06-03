@@ -1,0 +1,25 @@
+{
+  "folders": [
+	{
+		"path": "..\\.."
+	},
+	{
+		"path": "..\\..\\..\\JAVASCRIPT"
+	},
+	{
+		"path": "..\\..\\..\\..\\XML"
+	},
+	{
+		"path": "..\\..\\..\\..\\GitHub\\travel_agency"
+	},
+	{
+		"path": "..\\..\\..\\insta-unfollower-master\\insta-unfollower-master"
+	},
+	{
+		"path": "..\\..\\..\\Learn"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HTML"
+  }
+}
