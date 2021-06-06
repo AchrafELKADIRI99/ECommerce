@@ -1,3 +1,5 @@
+<div class="header">
+<div class="container">
 <div class="navbar">
                 <div class="logo">
                     <img src="Images\logo.png" width="125">
@@ -12,3 +14,4 @@
                 </nav>
                 <img src="Images\cart.png" href="<?php echo BASE_URL; ?>cart" width="30px" height="30px">
             </div>
+            </div>  

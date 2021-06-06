@@ -12,6 +12,7 @@ body{
     display: flex;
     align-items: center;
     padding: 20px;
+    height: 100px;
 }
 nav{
     flex: 1;
@@ -33,7 +34,7 @@ p{
     color: #555;
 }
 .container{
-    max-width: 1300px;
+    max-width: 1400px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -47,6 +48,7 @@ p{
 .col-2{
     flex-basis: 50%;
     min-width: 500px;
+    
 }
 .col-2 img{
     max-width: 100%;
@@ -80,8 +82,14 @@ p{
 }
 .col-3{
     flex-basis: 30%;
+    padding: 10px;
     min-width: 250px;
     margin-bottom: 30px ;
+    transition:transform 0.5s;
+
+}
+.col-3:hover{
+    transform: translateY(-5px);
 }
 .col-3 img {
     width: 100%;
@@ -103,6 +111,10 @@ p{
 .col-4 img{
     width: 100%;
 }
+.col-3 img{
+    width: 100%;
+}
+
 .title{
     text-align: center;
     margin: 0 auto 80px;
@@ -143,4 +155,7 @@ h4{
     min-width: 200px;
     margin-bottom: 50px;
     transition:transform 0.5s;
+}
+.col-5 img{
+    width: 100%;
 }
