@@ -12,7 +12,7 @@
             $products = Product::getShirts();
             return $products;
         }
-        public function getAllSorts(){
+        public function getShorts(){
             $products = Product::getShorts();
             return $products;
         }

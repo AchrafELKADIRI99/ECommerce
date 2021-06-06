@@ -1,12 +1,12 @@
-<body>
-    
+
+
 <div class="container">
     
 <div class="row">
                 <div class="col-2">
                     <h1>Stylish Basketball </h1>
                     <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, autem? Quidem esse tempora expedita veniam consequuntur, neque aliquid. Eligendi cum optio fuga doloribus nisi. Delectus molestiae alias omnis perspiciatis quas?</p>
-                    <a href="" class="btn">Explore &#10132;</a>
+                    <a href="<?php echo BASE_URL; ?>Products" class="btn">Explore &#10132;</a>
                 </div>
                 <div class="col-2">
                     <img src="Images\image1.png">
@@ -14,7 +14,8 @@
             </div>
 
 </div>
-</div>
+</div>  
+
 <!------- cats -------->
 
 <div class="categories">
@@ -31,7 +32,7 @@
     <h4>SHIRTS</h4></a>
 </div>
 <div class="col-3">
-    <a href="<?php echo BASE_URL; ?>Shorts"><img src="Images\cat3.jpg">
+    <a href="<?php echo BASE_URL; ?>Shorts"><img src="Images\cat33.jpg">
     <h4>SHORTS</h4></a>
 
 </div>

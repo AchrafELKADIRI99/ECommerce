@@ -1,3 +1,4 @@
+</div>
 <?php 
 
 $data = new ProductController();

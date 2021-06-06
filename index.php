@@ -17,7 +17,7 @@
                     if(isset($_SESSION['admin'])&& $_SESSION['admin']===true){
                         require_once("./views/includes/header.php");
 
-                        $admin = new adminController();
+                        $admin = new AdminController();
                         $admin->index($page);
                         require_once("./views/includes/footer.php");
                         
