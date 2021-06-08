@@ -6,7 +6,9 @@ $products = $data->getAllProducts();
 ?>
       
 </div>
+
 <div class="small-container">
+
 <div class="row">
                 <?php 
                    if(count($products)>0):

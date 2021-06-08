@@ -1,8 +1,8 @@
 <?php 
-    class ProductController {
+    class CategoriesController {
         public function getAllCategories(){
-            $catgories = Category::getAll();
-            return $catgories;
+            $categories = Category::getAllCategories();
+            return $categories;
         }}
         
         

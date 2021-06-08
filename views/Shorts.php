@@ -1,4 +1,5 @@
 </div>
+
 <?php 
 
 $data = new ProductController();
@@ -18,7 +19,9 @@ $products = $data->getShorts();
             
              <div class="col-4 ">
                     <img src="<?php echo $product['prod_image']; ?>"> 
-                        <?php echo $product['prod_title']; ?>
+                    <h4><?php echo $product['prod_title']; ?></h4>
+                        <p><?php echo $product['prod_price']; ?> DH </p>
+
                     </div>
                
                 <?php 

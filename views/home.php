@@ -14,8 +14,7 @@
             </div>
 
 </div>
-</div>  
-
+</div>
 <!------- cats -------->
 
 <div class="categories">
@@ -100,6 +99,6 @@
 </div>
 </div>
 
-</body>
+
 
 

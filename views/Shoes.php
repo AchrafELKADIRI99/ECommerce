@@ -6,6 +6,7 @@ $products = $data->getShoes();
 ?>
       
 </div>
+
 <div class="small-container">
 <div class="row">
                 <?php 
@@ -17,7 +18,9 @@ $products = $data->getShoes();
             
              <div class="col-4 ">
                     <img src="<?php echo $product['prod_image']; ?>"> 
-                        <?php echo $product['prod_title']; ?>
+                    <h4><?php echo $product['prod_title']; ?></h4>
+                        <p><?php echo $product['prod_price']; ?> DH </p>
+
                     </div>
                
                 <?php 
