@@ -12,7 +12,6 @@ body{
     display: flex;
     align-items: center;
     padding: 20px;
-    height: 100px;
 }
 nav{
     flex: 1;
@@ -109,7 +108,7 @@ p{
 }
 .col-4 {
     flex-basis: 25%;
-    padding: 10px;
+    padding: 20px;
     min-width: 200px;
     margin-bottom: 50px;
     transition:transform 0.5s;
@@ -259,4 +258,12 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+.col-3 a h4{
+text-align: center;
+}
+.col-md-12 .btn{
+    height: 50px;
+    width:10%;
+    margin: 5%;
 }
