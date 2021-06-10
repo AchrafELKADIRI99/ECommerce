@@ -6,7 +6,7 @@
     $pages=[
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
             'emptyCart','show','cancelCart','register','sign','checkout','logout',
-            'Products','orders','addorder','Shirts','Shorts','Shoes'];
+            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart'];
 
 
         if(isset($_GET['page'])){
