@@ -5,7 +5,7 @@
 
     $pages=[
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
-            'emptyCart','show','cancelCart','register','login','checkout','logout',
+            'emptyCart','show','cancelCart','register','sign','checkout','logout',
             'Products','orders','addorder','Shirts','Shorts','Shoes'];
 
 

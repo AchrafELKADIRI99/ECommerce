@@ -28,7 +28,7 @@
           
         </li>
                         <li><a  href="#opening">About us</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>account">Account</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>sign">Sign In/Up</a></li>
         
         <img src="Images\cart.png" href="<?php echo BASE_URL; ?>cart" width="30px" height="30px">
       </ul>
