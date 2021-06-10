@@ -2,7 +2,7 @@
 <div class="container">
 <div class="navbar">
 
-<nav class="navbar navbar-expand-lg           ">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
   <div class="logo">
                     <a href="<?php echo BASE_URL; ?>"><img src="Images\logo.png" width="125" ></a>
@@ -15,7 +15,7 @@
      
       <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
     <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="  color: #24262b;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" style="  color: #555;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products 
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
