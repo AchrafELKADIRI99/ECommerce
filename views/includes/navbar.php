@@ -33,8 +33,7 @@
                     </ul>
                     <a href="<?php echo BASE_URL; ?>shoppingCart"> <img src="Images\cart.png"  width="30px" height="30px"></a>
 
-        
-        <img src="Images\cart.png" href="<?php echo BASE_URL; ?>cart" width="30px" height="30px">
+    
       </ul>
       </ul>
     </div>
