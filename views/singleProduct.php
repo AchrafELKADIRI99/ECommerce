@@ -4,6 +4,7 @@ $data = new ProductController();
 $products = $data->getAllProducts();
 
 ?>
+</div>
 
 <div class="small-container">
 
