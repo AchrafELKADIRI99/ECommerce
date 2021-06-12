@@ -1,22 +1,22 @@
 <?php 
     class User{
         static public function login($data){
-            $username = $data["username"];
-            try{
-                $query="SELECT * FROM USERS WHERE username = :username";
-                $stmt = DB::connect()->prepare($query);
-                $stmt -> execute(array(":username"=>$username));
-                $user=$stmt -> fetch(PDO::FETCH_OBJ);
-            }catch(PDOException $ex){
-                echo "error:" .$ex.getMessage();
-            }
+            $email = $data["email"];
+            try {
+            $query = "SELECT * FROM users WHERE email = :email";
+            $stmt = DB::connect()->prepare($query);
+            $stmt->execute(array(":email"=>$email));
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+            return $user;
+        } catch (PDOException $ex) {
+            echo "error : ".$ex.getMessage();
+        }
         }
         static public function createUser($data){
             $stmt = DB::connect()->prepare('INSERT INTO users (fullname
-            ,username,email,password)
-            VALUES (:fullname,:username,:email,:password)');
+            ,email,password)
+            VALUES (:fullname,:email,:password)');
             $stmt->bindParam(':fullname',$data['fullname']);
-            $stmt->bindParam(':username',$data['username']);
             $stmt->bindParam(':email',$data['email']);
             $stmt->bindParam(':password',$data['password']);
             if($stmt->execute()){
