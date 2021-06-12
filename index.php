@@ -5,8 +5,12 @@
 
     $pages=[
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
+
             'emptyCart','show','cancelCart','register','sign','checkout','logout',
-            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart'];
+            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct'];
+
+            
+
 
 
         if(isset($_GET['page'])){
