@@ -35,7 +35,7 @@ if(isset($_POST["submit"])){
         <span>Password</span>
         <input type="password" name="password" required>
       </label>
-      <button class="submit" name="submit">Sign In</button>
+      <button onClick="verif()" class="submit" name="submit">Sign In</button>
       <p class="forgot-pass">Forgot Password ?</p>
 
       
@@ -71,11 +71,11 @@ if(isset($_POST["submit"])){
         </label>
         <label>
           <span>Password</span>
-          <input type="password" name="password" required>
+          <input type="password" name="password" id="pwd" required>
         </label>
         <label>
           <span>Confirm Password</span>
-          <input type="password" required >
+          <input type="password" id="pwd2" required >
         </label>
         <button name="submita" class="submit">Sign Up Now</button>
       </div>
@@ -95,4 +95,3 @@ if(isset($_POST["submit"])){
 
   <br>
 
-<script type="text/javascript" src="public\scripts\loginscript.js"></script>
