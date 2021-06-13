@@ -30,7 +30,7 @@ $products = $data->getAllProducts();
                          <h4 >
                          <?php echo $product['prod_title']; ?>
                          </h4>
-                        <p><?php echo $product['prod_price']; ?></p>
+                        <p><?php echo $product['prod_price']; ?> DH</p>
                         <input type="hidden" name="productId" id="prodId"  class="btn btn-warning" ></input>
                         </form>
                     </div>

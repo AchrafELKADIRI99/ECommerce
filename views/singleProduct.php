@@ -24,7 +24,7 @@ $products = $data->getAllProducts();
                     <img src="<?php echo $product['prod_image']; ?>"> 
                          <h4><?php echo $product['prod_title']; ?></h4>
                         <p><?php echo $product['prod_price']; ?> DH </p>
-                        <p><?php echo $product['prod_description']; ?> DH </p>
+                        <p><?php echo $product['prod_description']; ?> </p>
 
                         
                        
