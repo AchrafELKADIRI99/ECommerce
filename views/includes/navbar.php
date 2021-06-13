@@ -14,6 +14,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
 
       <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
+
     <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" style="  color: #555;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products

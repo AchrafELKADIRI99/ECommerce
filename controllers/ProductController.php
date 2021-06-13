@@ -49,7 +49,6 @@
                     "product_quantity" => $_POST["product_quantity"],
                     "short_desc" => $_POST["short_desc"],
                     "product_image" => $this->uploadPhoto(),
-                    "old_price" => $_POST["old_price"],
                     "product_price" => $_POST["product_price"],
                     "product_category_id" => $_POST["product_category_id"],
                 );
@@ -72,8 +71,6 @@
                     "product_quantity" => $_POST["product_quantity"],
                     "short_desc" => $_POST["short_desc"],
                     "product_image" => $this->uploadPhoto($oldImage),
-                    "old_price" => $_POST["old_price"],
-                    "product_price" => $_POST["product_price"],
                     "product_category_id" => $_POST["product_category_id"],
                 );
                 $result = Product::editProduct($data);
