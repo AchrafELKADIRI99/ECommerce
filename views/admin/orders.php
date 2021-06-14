@@ -17,6 +17,8 @@ include('views/admin/dashboard.php');
         <div class="col-md-12 mx-auto">
         <h3 class="text-center font-weight-bold"> ORDERS</h3>
             <div class="card bg-light p-3">
+            <div class="table-responsive">
+
                 <table class="table table-hover table-inverse">
                     <thead>
                         <tr>
@@ -46,8 +48,8 @@ include('views/admin/dashboard.php');
                             <td> <?php echo $order["zip"] ?></td>
                             <td> <?php echo $order["product_name"] ?></td>
                             <td> <?php echo $order["qte"] ?></td>
-                            <td> <?php echo $order["price"] ?></td>
-                            <td> <?php echo $order["total"] ?></td>
+                            <td> <?php echo $order["price"]  ?> DH</td>
+                            <td> <?php echo $order["total"] ?> DH</td>
                             <td> <?php echo $order["date"] ?></td>
 
                         </tr>
@@ -55,6 +57,7 @@ include('views/admin/dashboard.php');
                     <?php endforeach ?>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
 
             'emptyCart','show','cancelCart','register','sign','checkout','logout',
-            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct','dashboard'];
+            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct','dashboard','productsadmin'];
 
             
 
@@ -17,7 +17,7 @@
             if(in_array($_GET['page'],$pages)){
                 $page=$_GET['page'];
                 if($page==="dashboard"||$page==="deleteProduct"
-                ||$page==="addProduct" ||$page==="updateProduct" ||$page==="orders"){
+                ||$page==="addProduct" ||$page==="updateProduct" ||$page==="orders" ||$page==="productsadmin"){
                     if(isset($_SESSION['admin'])&& $_SESSION['admin']==true){
                         require_once("./views/includes/header.php");
 

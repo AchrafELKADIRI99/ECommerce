@@ -2,7 +2,7 @@
 <div class="container">
 <div class="navbar">
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
   <div class="logo">
                     <a href="<?php echo BASE_URL; ?>"><img src="Images\logo.png" width="125" ></a>

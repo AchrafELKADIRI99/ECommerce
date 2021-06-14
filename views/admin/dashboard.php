@@ -1,4 +1,4 @@
-<div class="container " style="margin-bottom:100px">
+<div class="container " style="margin-bottom:100px; background-color:#24262b; margin:auto;">
     <div class="row my-5" >
         <div class="col-md-4">
             <div class="card p-0 " style="background-color:#24262b">
