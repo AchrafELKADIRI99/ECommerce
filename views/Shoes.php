@@ -17,7 +17,7 @@ $products = $data->getShoes();
                 ?>
             
              <div class="col-4 ">
-                    <img src="<?php echo $product['prod_image']; ?>"> 
+             <img src="./Images/<?php echo $product["prod_image"];?>"> 
                     <h4><?php echo $product['prod_title']; ?></h4>
                         <p><?php echo $product['prod_price']; ?> DH </p>
 

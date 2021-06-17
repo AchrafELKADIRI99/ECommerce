@@ -267,3 +267,17 @@ text-align: center;
     width:10%;
     margin: 5%;
 }
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.table td {
+  text-align: center;
+}

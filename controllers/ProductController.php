@@ -44,18 +44,18 @@
         public function newProduct(){
             if(isset($_POST["submit"])){
                 $data = array(
-                    "product_title" => $_POST["product_title"],
-                    "product_description" => $_POST["product_description"],
-                    "product_quantity" => $_POST["product_quantity"],
-                    "short_desc" => $_POST["short_desc"],
-                    "product_image" => $this->uploadPhoto(),
-                    "product_price" => $_POST["product_price"],
-                    "product_category_id" => $_POST["product_category_id"],
+                    "prod_title" => $_POST["prod_title"],
+                    "prod_description" => $_POST["prod_description"],
+                    "prod_quantity" => $_POST["prod_quantity"],
+                    "prod_short_desc" => $_POST["prod_short_desc"],
+                    "prod_image" => $this->uploadPhoto(),
+                    "prod_price" => $_POST["prod_price"],
+                    "prod_category_id" => $_POST["prod_category_id"],
                 );
                 $result = Product::addProduct($data);
                 if($result === "ok"){
-                    Session::set("success","Produit ajouté");
-                    Redirect::to("products");
+                    Session::set("success","Product added");
+                    Redirect::to("productsadmin");
                 }else{
                     echo $result;
                 }
@@ -65,33 +65,33 @@
             if(isset($_POST["submit"])){
                 $oldImage = $_POST["product_current_image"];
                 $data = array(
-                    "product_id" => $_POST["product_id"],
-                    "product_title" => $_POST["product_title"],
-                    "product_description" => $_POST["product_description"],
-                    "product_quantity" => $_POST["product_quantity"],
-                    "short_desc" => $_POST["short_desc"],
-                    "product_image" => $this->uploadPhoto($oldImage),
-                    "product_category_id" => $_POST["product_category_id"],
+                    "prod_id" => $_POST["prod_id"],
+                    "product_title" => $_POST["prod_title"],
+                    "product_description" => $_POST["prod_description"],
+                    "product_quantity" => $_POST["prod_quantity"],
+                    "prod_short_desc" => $_POST["prod_short_desc"],
+                    "prod_image" => $this->uploadPhoto($oldImage),
+                    "prod_category_id" => $_POST["prod_category_id"],
                 );
                 $result = Product::editProduct($data);
                 if($result === "ok"){
-                    Session::set("success","Produit modifié");
-                    Redirect::to("products");
+                    Session::set("success","Product edited");
+                    Redirect::to("productsadmin");
                 }else{
                     echo $result;
                 }
             }
         }
         public function uploadPhoto($oldImage = null){
-            $dir = "public/uploads";
+            $dir = "./Images";
             $time = time();
-            $name = str_replace(' ','-',strtolower($_FILES["image"]["name"]));
-            $type = $_FILES["image"]["type"];
+            $name = str_replace(' ','-',strtolower($_FILES["prod_image"]["name"]));
+            $type = $_FILES["prod_image"]["type"];
             $ext = substr($name,strpos($name,'.'));
             $ext = str_replace('.','',$ext);
             $name = preg_replace("/\.[^.\s]{3,4}$/", "",$name);
             $imageName = $name.'-'.$time.'.'.$ext;
-            if(move_uploaded_file($_FILES["image"]["tmp_name"],$dir."/".$imageName)){
+            if(move_uploaded_file($_FILES["prod_image"]["tmp_name"],$dir."/".$imageName)){
                 return $imageName; 
             }
             return $oldImage;
@@ -103,8 +103,8 @@
                 );
                 $result = Product::deleteProduct($data);
                 if($result === "ok"){
-                    Session::set("success","Produit supprimé");
-                    Redirect::to("products");
+                    Session::set("success","Product deleted");
+                    Redirect::to("productsadmin");
                 }else{
                     echo $result;
                 }

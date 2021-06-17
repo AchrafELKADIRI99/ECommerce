@@ -42,10 +42,11 @@
 
           <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true): ?>
             <li><a class="dropdown-item" href="#"><?php echo $_SESSION["fullname"]; ?></a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>logout">Déconnexion</a></li>
             <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] == true): ?>
-              <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>dashboard">Admin <span class="sr-only">(current)</span></a>
+              <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>dashboard">Dashboard <span class="sr-only">(current)</span></a>
               <?php endif;?>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>logout">Déconnexion</a></li>
+            
         <?php endif;?>
         <?php else: ?>
           <li><a  href="<?php echo BASE_URL; ?>sign">Sign In/Up</a></li>
