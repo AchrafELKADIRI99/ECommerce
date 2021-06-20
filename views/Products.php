@@ -13,9 +13,10 @@ $products = $data->getAllProducts();
 
 
 <div class="row">
-    
+
                 <?php 
                    if(count($products)>0):
+                    
                 ?>
                 <?php 
                    foreach($products as $product):

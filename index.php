@@ -6,8 +6,8 @@
     $pages=[
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
 
-            'emptyCart','show','cancelCart','register','sign','checkout','logout',
-            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct'];
+            'emptycart','show','cancelcart','register','sign','checkout','logout',
+            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct','checkout'];
 
             
 

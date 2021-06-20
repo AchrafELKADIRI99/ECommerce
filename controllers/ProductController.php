@@ -16,6 +16,8 @@
             $products = Product::getShorts();
             return $products;
         }
+
+        
          
         public function getProductsByCategory($id){
             if(isset($id)){
@@ -39,7 +41,7 @@
             unset($_SESSION["products_".$id]);
             $_SESSION["count"] -= 1;
             $_SESSION["totaux"] -= $price;
-            Redirect::to("cart");
+            Redirect::to("shoppingCart");
         }
         public function newProduct(){
             if(isset($_POST["submit"])){

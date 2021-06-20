@@ -33,7 +33,7 @@ $products = $data->getAllProducts();
                     <h3 class="text-secondary m-3 text-center">
                         Qté : 
                     </h3>
-                    <form method="post" action="<?php echo BASE_URL; ?>shoppingCart">
+                    <form method="post" action="<?php echo BASE_URL; ?>checkout">
                         <div class="form-groupe">
                             <input type="number" name="product_qte" id="product_qte" class="form-control" value="1">
                             <input type="hidden" name="product_title" value="<?php echo $product['prod_title']; ?>">
