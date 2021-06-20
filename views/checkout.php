@@ -33,7 +33,7 @@ if(isset($_POST["product_id"])){
             "title" => $product->prod_title,
             "price" => $product->prod_price,
             "qte" => $_POST["product_qte"],
-            "total" => $product->prod_price*$product->prod_quantity,
+            "total" => $product->prod_price*$_POST["product_qte"],
     
         );
     
