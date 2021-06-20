@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=AR7XCqdoQK0G30vREd9Dyez9l-0P6wl_ZyJFV1YGrqkgMFcb-DvXCeM84aK0xpsOAn8w64xmpoVtHBNn"> </script>
 </head>
 <body>
 <?php include("navbar.php");?>
