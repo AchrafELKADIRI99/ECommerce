@@ -15,10 +15,9 @@ function getCatProducts($id) {
   }
   
 
-  
-  function deleteForm($id) {
+function deleteForm($id) {
     const input = document.querySelector("#delete_product_id");
     const form = document.querySelector("#delete_form");
     input.value = $id;
     form.submit();
-  }
+}

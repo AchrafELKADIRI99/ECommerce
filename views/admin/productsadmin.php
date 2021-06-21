@@ -75,7 +75,7 @@ include('views/admin/dashboard.php');
                             class="form-control" name="prod_image" >
                         </div>
                         <div class="form-group">
-                            <button name="submit" class=" btn-primary">
+                            <button name="submit" class=" btn-primary btn-sm">
                                 Save
                             </button>
                         </div>
@@ -83,7 +83,7 @@ include('views/admin/dashboard.php');
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" style=" border-radius:3.25em;" class=" btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" style=" border-radius:3.25em;" class=" btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
 
                     </div>
                 </div>
@@ -91,7 +91,8 @@ include('views/admin/dashboard.php');
         </div>
 
         </br>
-        <div style="margin-left: 9%;" class="btn-group" role="group" aria-label="Basic example"><button type="button"  id="Modal" class=" btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+        <div style="margin-left: 9%;" class="btn-group" role="group" aria-label="Basic example">
+        <button type="button"  id="Modal" class=" btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#productModal">
                 ADD
             </button></div>
         <div class="form-group">

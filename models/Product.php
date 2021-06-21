@@ -63,7 +63,7 @@
                     prod_price=:prod_price,
                     prod_short_desc=:prod_short_desc,
                     prod_category_id=:prod_category_id
-                    WHERE product_id=:product_id
+                    WHERE prod_id=:prod_id
             ');
             $stmt->bindParam(':prod_id',$data['prod_id']);
             $stmt->bindParam(':prod_title',$data['prod_title']);
