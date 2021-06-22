@@ -7,6 +7,7 @@ $products = $data->getAllProducts();
 </div>
 
 <div class="small-container">
+<br><br>
 
 <div class="row">
                 <?php 
@@ -56,3 +57,4 @@ $products = $data->getAllProducts();
                 ?>
                 
             </div>
+            <br><br>

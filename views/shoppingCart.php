@@ -1,5 +1,7 @@
 </div>
 <div class="container">
+<br><br>
+
     <div class="row">
         <div class="col-md-8 bg-white">
             <table class="table table-stripped">
@@ -39,7 +41,7 @@
                 <?php if(isset($_SESSION["count"]) && $_SESSION["count"] > 0 && isset($_SESSION["logged"])):?>
                     <div id="paypal-button-container"></div>
                 <?php elseif(isset($_SESSION["count"]) && $_SESSION["count"] > 0):?>
-                    <a href="<?php echo BASE_URL;?>sign" class="btn-warning btn-sm mr-150">Log in to complete your purchases</a>
+                    <a href="<?php echo BASE_URL;?>sign" class="btn-info btn-sm mr-150">Log in to complete your purchases</a>
                 <?php endif;?>
         </div>
         
@@ -72,6 +74,8 @@
             <?php endif;?>
         </div>
     </div>
+    <br><br>
+
 </div>
 
 
