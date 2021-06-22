@@ -21,6 +21,7 @@
             $st -> close;
             $st=null;
         }
+       
         static public function getShorts(){
             $st = DB::connect()-> prepare('SELECT * FROM PRODUCTS WHERE PROD_CATEGORY_ID=3');
             $st->execute();
@@ -29,8 +30,14 @@
             $st=null;
         }
 
+        static public function getById($id){
+            $st = DB::connect()-> prepare('SELECT * FROM PRODUCTS WHERE PROD_ID='.$id);
+            $st->execute();
+            return $st -> fetchAll();
+            $st -> close;
+            $st=null;
 
-
+        }
         static public function getProductByCat($data){
             $id = $data['id'];
             try{
@@ -43,6 +50,7 @@
                 echo "erreur " .$ex->getMessage();
             }
         }
+        
         static public function getProductById($data){
             $id = $data['id'];
             try{
