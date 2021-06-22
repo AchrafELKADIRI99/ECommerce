@@ -25,7 +25,7 @@ $products = $data->getAllProducts();
             
              <div class="col-4 ">
              <form  role="button" id="form" onclick="submitForm(<?php echo $productId; ?>)" name="submit" method="post" action="<?php echo BASE_URL;?>singleProduct">
-                    <img src="<?php echo $product['prod_image']; ?>"> 
+                    <img src="./Images/<?php echo $product["prod_image"];?>"> 
                    
 
                          <h4 >

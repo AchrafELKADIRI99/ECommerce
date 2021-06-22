@@ -4,7 +4,7 @@ if(isset($_POST["product_id"])){
 
     $id = $_POST["product_id"];
     $data = new ProductController();
-    $product = $data->getProduct();
+    $product = $data->getProduct2();
 
     if(isset($_SESSION["products_".$id])){
 

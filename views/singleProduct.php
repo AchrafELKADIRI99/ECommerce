@@ -21,7 +21,7 @@ $products = $data->getAllProducts();
                 ?>
             
              <div class="col-md-6 ">
-                    <img src="<?php echo $product['prod_image']; ?>" class="img-fluid rounded"> 
+                    <img src="./Images/<?php echo $product["prod_image"];?>" class="img-fluid rounded"> 
                          <h4><?php echo $product['prod_title']; ?></h4>
                         <p><?php echo $product['prod_price']; ?> DH </p>
                         <p><?php echo $product['prod_description']; ?> </p>

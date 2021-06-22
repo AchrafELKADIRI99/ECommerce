@@ -1,4 +1,6 @@
-
+<?php $data = new ProductController();
+$products = $data->getLatest();
+?>
 
 <div class="container">
     
@@ -42,59 +44,34 @@
 <div class="small-container">
 <h2 class="title">New Products</h2>
 <div class="row">
-<div class="col-4">
-    <img src="Images\product1.jpg"> 
-    <h4>LEBRON's Shirt</h4>
-    <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
+<?php 
+                   if(count($products)>0):
+                ?>
+                <?php 
+                   foreach($products as $product):
+                    $productId = $product['prod_id'];
+                ?>
+            
+             <div class="col-4 ">
+             <form  role="button" id="form" onclick="submitForm(<?php echo $productId; ?>)" name="submit" method="post" action="<?php echo BASE_URL;?>singleProduct">
+                    <img src="./Images/<?php echo $product["prod_image"];?>"> 
+                   
 
-    </div>
-    <p> 500.00DHS</p>
-</div>
-<div class="col-4">
-    <img src="Images\product2.jpg"> 
-    <h4>CURRY's Shirt</h4>
-    <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-
-    </div>
-    <p> 500.00DHS</p>
-</div>
-<div class="col-4">
-    <img src="Images\product3.jpg"> 
-    <h4>LEBRON Shoes</h4>
-    <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star-half-o" ></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-
-    </div>
-    <p> 1500.00DHS</p>
-</div>
-<div class="col-4">
-    <img src="Images\product4.jpg"> 
-    <h4>KYRIE's Shirt</h4>
-    <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" ></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star-half-o" ></i>
-       
-
-    </div>
-    <p> 450.00DHS</p>
-</div>
+                         <h4 >
+                         <?php echo $product['prod_title']; ?>
+                         </h4>
+                        <p><?php echo $product['prod_price']; ?> DH</p>
+                        <input type="hidden" name="productId" id="prodId"  class="btn btn-warning" ></input>
+                        </form>
+                    </div>
+               
+                <?php 
+                    endforeach;
+                ?>
+                 </div>
+                <?php 
+                    endif;
+                ?>
 
 </div>
 </div>

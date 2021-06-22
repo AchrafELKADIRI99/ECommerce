@@ -7,7 +7,8 @@
             'home','cart','dashboard','updateProduct','deleteProduct','addProduct',
 
             'emptycart','show','cancelcart','register','sign','checkout','logout',
-            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct','checkout'];
+            'Products','orders','addorder','Shirts','Shorts','Shoes', 'shoppingCart','singleProduct',
+            'dashboard','productsadmin' ,'users','deleteOrder','deleteUser'];
 
             
 
@@ -16,9 +17,9 @@
         if(isset($_GET['page'])){
             if(in_array($_GET['page'],$pages)){
                 $page=$_GET['page'];
-                if($page==="dashboard"||$page==="deleteProduct"
-                ||$page==="addProduct" ||$page==="updateProduct" ||$page==="orders"){
-                    if(isset($_SESSION['admin'])&& $_SESSION['admin']===true){
+                if($page==="dashboard"||$page==="deleteProduct" ||$page==="deleteOrder"
+                ||$page==="addProduct" ||$page==="updateProduct" ||$page==="orders" ||$page==="productsadmin" || $page==="users" || $page==="deleteUser"){
+                    if(isset($_SESSION['admin'])&& $_SESSION['admin']==true){
                         require_once("./views/includes/header.php");
 
                         $admin = new AdminController();

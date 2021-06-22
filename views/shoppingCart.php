@@ -24,7 +24,7 @@
                             <form method="post" action="<?php echo BASE_URL;?>cancelcart">
                                 <input type="hidden" name="product_id" value="<?php echo $product["id"];?>">
                                 <input type="hidden" name="product_price" value="<?php echo $product["total"];?>">
-                                <button type="submit" class="btn btn-md btn-danger text-white ">
+                                <button type="submit" class=" btn-danger btn-sm mr-150 ">
                                     &times;
                                 </button>
                             </form>
@@ -39,7 +39,7 @@
                 <?php if(isset($_SESSION["count"]) && $_SESSION["count"] > 0 && isset($_SESSION["logged"])):?>
                     <div id="paypal-button-container"></div>
                 <?php elseif(isset($_SESSION["count"]) && $_SESSION["count"] > 0):?>
-                    <a href="<?php echo BASE_URL;?>sign" class="btn btn-link">Log in to complete your purchases</a>
+                    <a href="<?php echo BASE_URL;?>sign" class="btn-warning btn-sm mr-150">Log in to complete your purchases</a>
                 <?php endif;?>
         </div>
         
@@ -64,7 +64,7 @@
            </table>
             <?php if(isset($_SESSION["count"]) && $_SESSION["count"] > 0):?>
                 <form method="post" action="<?php echo BASE_URL;?>emptycart">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class=" btn-primary btn-sm mr-150">
                         Clear cart
                     </button>
                 </form>

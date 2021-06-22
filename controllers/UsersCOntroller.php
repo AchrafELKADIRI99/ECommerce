@@ -45,6 +45,31 @@
             public function logout(){
                 session_destroy();
             }
+
+
+
+            public function getAllUsers(){
+                $users = User::getAll();
+                return $users;
+            }
+
+
+            public function removeUser(){
+                if(isset($_POST["delete_user_id"])){
+                    $data = array(
+                        "id" => $_POST["delete_user_id"]
+                    );
+                    $result = User::deleteUser($data);
+                    if($result === "ok"){
+                        Session::set("success","User deleted");
+                        Redirect::to("users");
+                    }else{
+                        echo $result;
+                    }
+                }
+            }
+
+
         }
     
 ?>
