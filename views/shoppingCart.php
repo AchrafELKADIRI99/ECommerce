@@ -76,7 +76,8 @@
 
 
 
-
+<?php if(isset($_SESSION["count"]) && $_SESSION["count"] > 0):?>
+                
 <!-- Add the checkout buttons, set up the order and approve the order -->
 <script>
     let amount = document.querySelector('#amount').dataset.amount;
@@ -97,4 +98,4 @@
       });
     }
   }).render('#paypal-button-container'); // Display payment options on your web page
-</script>
+</script>            <?php endif;?>
