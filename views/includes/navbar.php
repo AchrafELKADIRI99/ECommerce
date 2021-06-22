@@ -16,7 +16,7 @@
       <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
 
     <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="  color: #555;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" style="  color: #555;" href="accountedit" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -45,7 +45,7 @@
             <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] == true): ?>
               <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>dashboard">Dashboard <span class="sr-only">(current)</span></a>
               <?php endif;?>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>logout">Déconnexion</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>logout">Logout</a></li>
             
         <?php endif;?>
         <?php else: ?>

@@ -37,3 +37,8 @@
     </div>
 
     </div> <!-- margin close from dashboard--> 
+    <div class="container">
+
+    <?php
+            include('./views/includes/alerts.php')
+        ?></div>

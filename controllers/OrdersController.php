@@ -14,8 +14,22 @@
                         unset($_SESSION["totaux"]);
                     }
                 }
-                Session::set("Succeed","Commande registred");
+                Session::set("Succeed","Command registred");
                 Redirect::to("home");
+            }
+        }
+        public function removeOrder(){
+            if(isset($_POST["delete_order_id"])){
+                $data = array(
+                    "id" => $_POST["delete_order_id"]
+                );
+                $result = Order::deleteOrder($data);
+                if($result === "ok"){
+                    Session::set("success","Order deleted");
+                    Redirect::to("orders");
+                }else{
+                    echo $result;
+                }
             }
         }
     }

@@ -27,6 +27,29 @@
             $stmt->close();
             $stmt = null;
         }
+        static public function getAll(){
+            $st = DB::connect()-> prepare('SELECT * FROM USERS WHERE user_id NOT IN (19)');
+            $st->execute();
+            return $st -> fetchAll();
+            $st -> close;
+            $st=null;
+        }
+        static public function deleteUser($data){
+            $id = $data['id'];
+            try{
+                $stmt = DB::connect()->prepare('DELETE FROM users WHERE user_id = :id');
+                $stmt->execute(array(":id" => $id));
+                if($stmt->execute()){
+                    return 'ok';
+                }else{
+                    return 'error';
+                }
+                $stmt->close();
+                $stmt =null;
+            }catch(PDOException $ex){
+                echo "erreur " .$ex->getMessage();
+            }
+        }
     }
 
 

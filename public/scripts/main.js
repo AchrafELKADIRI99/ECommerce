@@ -21,3 +21,17 @@ function deleteForm($id) {
     input.value = $id;
     form.submit();
 }
+function deleteFormorder($id) {
+    const input = document.querySelector("#delete_order_id");
+    const form = document.querySelector("#delete_or_form");
+    input.value = $id;
+    form.submit();
+}
+
+
+function deleteFormuser($id) {
+    const input = document.querySelector("#delete_user_id");
+    const form = document.querySelector("#delete_us_form");
+    input.value = $id;
+    form.submit();
+}

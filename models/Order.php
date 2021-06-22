@@ -26,4 +26,22 @@ class Order{
             $stmt->close();
             $stmt = null;
     }
+
+
+    static public function deleteOrder($data){
+        $id = $data['id'];
+        try{
+            $stmt = DB::connect()->prepare('DELETE FROM orders WHERE ord_id = :id');
+            $stmt->execute(array(":id" => $id));
+            if($stmt->execute()){
+                return 'ok';
+            }else{
+                return 'error';
+            }
+            $stmt->close();
+            $stmt =null;
+        }catch(PDOException $ex){
+            echo "erreur " .$ex->getMessage();
+        }
+    }
 }

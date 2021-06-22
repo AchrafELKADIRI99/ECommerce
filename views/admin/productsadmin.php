@@ -20,6 +20,7 @@ include('views/admin/dashboard.php');
 
 <div class="container">
     <div class="row my-5">
+  
         <div class="col-md-12 mx-auto">
             
         <h3 class="text-center font-weight-bold"> Products</h3>
@@ -99,7 +100,7 @@ include('views/admin/dashboard.php');
            
         </div>
         <form id="form" action="<?php echo BASE_URL?>updateProduct" method="post">
-            <input type="hidden" name="product_id" id="product_id">
+            <input type="hidden" name="prodId" id="prodId">
         </form>
         <form id="delete_form" action="<?php echo BASE_URL?>deleteProduct" method="post">
             <input type="hidden" name="delete_product_id" id="delete_product_id">
@@ -134,16 +135,19 @@ include('views/admin/dashboard.php');
                             <td > <?php echo $product["prod_short_desc"] ?></td>
                             <td > <?php echo substr($product["prod_description"],0,100 )?></td>
                             <td  >                     
-
                             <img height="100"  width="100"  src="./Images/<?php echo $product["prod_image"];?>" class='img-fluid img-thumbnail'> </td>
                             <td  >
                                 <div  class="d-flex flex-row justify-content-center align-items-center   ">
-                            <a onclick="submitForm(<?php echo $product['prod_id'];?>)" class=" btn-warning btn-sm mr-150">
+
+                                
+
+
+            <button type="button" onclick="submitForm(<?php echo $product['prod_id'];?>)" class=" btn-warning btn-sm mr-150">
                                 Modifier
-                            </a>
-                            <a onclick="deleteForm(<?php echo $product['prod_id'];?>)" class=" btn-danger btn-sm">
+                                </button>
+                                <button type="button" onclick="deleteForm(<?php echo $product['prod_id'];?>)" class=" btn-danger btn-sm ">
                                 Delete
-                            </a></div>
+                                </button></div>
                         </td>
                         </tr>
                         

@@ -17,6 +17,10 @@ include('views/admin/dashboard.php');
         <div class="col-md-12 mx-auto">
         <h3 class="text-center font-weight-bold"> ORDERS</h3>
             <div class="card bg-light p-3">
+
+            <form id="delete_or_form" action="<?php echo BASE_URL?>deleteOrder" method="post">
+            <input type="hidden" name="delete_order_id" id="delete_order_id">
+        </form>
             <div class="table-responsive">
 
                 <table class="table table-hover table-inverse">
@@ -26,9 +30,7 @@ include('views/admin/dashboard.php');
                             <th>Client ID</th>
                             <th> Product ID </th>
                             <th>Full Name</th>
-                            <th> Address </th>
-                            <th> City </th>
-                            <th> ZIP </th>
+                           
                             <th>Product Name</th>
                             <th>Quantity</th>
                             <th> Prix </th> 
@@ -43,14 +45,20 @@ include('views/admin/dashboard.php');
                             <td> <?php echo $order["client_id"] ?></td>
                             <td> <?php echo $order["prod_id"] ?></td>
                             <td> <?php echo $order["fullname"] ?></td>
-                            <td> <?php echo $order["address"] ?></td>
-                            <td> <?php echo $order["city"] ?></td>
-                            <td> <?php echo $order["zip"] ?></td>
+                           
                             <td> <?php echo $order["product_name"] ?></td>
                             <td> <?php echo $order["qte"] ?></td>
                             <td> <?php echo $order["price"]  ?> DH</td>
                             <td> <?php echo $order["total"] ?> DH</td>
                             <td> <?php echo $order["date"] ?></td>
+                            <td  >
+                                <div  class="d-flex flex-row justify-content-center align-items-center   ">
+
+                            
+                                <button type="button" onclick="deleteFormorder(<?php echo $order['ord_id'];?>)" class=" btn-danger btn-sm ">
+                                Delete
+                                </button></div>
+                        </td>
 
                         </tr>
                         

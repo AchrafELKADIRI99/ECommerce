@@ -16,6 +16,11 @@
             $products = Product::getShorts();
             return $products;
         }
+
+        public function getLatest(){
+            $products = Product::latestProducts();
+            return $products;
+        }
          
         public function getProductsByCategory($id){
             if(isset($id)){
@@ -27,19 +32,39 @@
             }
         }
          public function getProduct(){
-            if(isset($_POST["product_id"])){
+            if(isset($_POST["prodId"])){
                 $data = array(
-                    'id' => $_POST["product_id"]
+                    'id' => $_POST["prodId"]
+                    
                 );
                 $product = Product::getProductById($data);
                 return $product;
             }
         }
+        
+        
+
+
+
+
         public function emptyCart($id,$price){
             unset($_SESSION["products_".$id]);
             $_SESSION["count"] -= 1;
             $_SESSION["totaux"] -= $price;
             Redirect::to("cart");
+        }
+        static public function getProductById($data){
+            $id = $data['id'];
+            try{
+                $stmt = DB::connect()->prepare('SELECT * FROM products WHERE prod_id = :id');
+                $stmt->execute(array(":id" => $id));
+                $product = $stmt->fetch(PDO::FETCH_OBJ);
+                return $product;
+                $stmt->close();
+                $stmt =null;
+            }catch(PDOException $ex){
+                echo "erreur " .$ex->getMessage();
+            }
         }
         public function newProduct(){
             if(isset($_POST["submit"])){
@@ -63,19 +88,21 @@
         }
         public function updateProduct(){
             if(isset($_POST["submit"])){
-                $oldImage = $_POST["product_current_image"];
+                $oldImage = $_POST["prod_current_image"];
                 $data = array(
                     "prod_id" => $_POST["prod_id"],
-                    "product_title" => $_POST["prod_title"],
-                    "product_description" => $_POST["prod_description"],
-                    "product_quantity" => $_POST["prod_quantity"],
+                    "prod_title" => $_POST["prod_title"],
+                    "prod_description" => $_POST["prod_description"],
+                    "prod_quantity" => $_POST["prod_quantity"],
                     "prod_short_desc" => $_POST["prod_short_desc"],
                     "prod_image" => $this->uploadPhoto($oldImage),
+                  
+                    "prod_price" => $_POST["prod_price"],
                     "prod_category_id" => $_POST["prod_category_id"],
                 );
                 $result = Product::editProduct($data);
                 if($result === "ok"){
-                    Session::set("success","Product edited");
+                    Session::set("success","PRODUCT MODIFIED");
                     Redirect::to("productsadmin");
                 }else{
                     echo $result;
